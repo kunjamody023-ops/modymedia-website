@@ -81,7 +81,10 @@
   /* Featured hero video on top */
   .port-featured { position: relative; width: 100%; background: #000; overflow: hidden; margin-bottom: 1.2rem; }
   .port-featured-video { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #000; }
-  .port-featured-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); pointer-events: none; }
+  .port-featured-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); pointer-events: none; opacity: 1; transition: opacity 0.6s ease; }
+  .port-featured.yt-playing .port-featured-info { opacity: 0; }
+  .port-item.yt-playing .port-info { opacity: 0 !important; }
+  .port-item.yt-playing::after { opacity: 0 !important; }
   .port-featured-tag { display: inline-block; font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.6rem; padding: 0.4rem 0.9rem; border: 1px solid rgba(255,255,255,0.3); }
   .port-featured-info h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 400; margin-bottom: 0.3rem; color: #fff; }
   .port-featured-info p { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
@@ -255,7 +258,7 @@
     <p style="font-size:0.82rem;color:var(--muted);max-width:260px;text-align:right;line-height:1.8;">Recent projects across brand, social, and event production.</p>
   </div>
   <div class="port-featured fade-up">
-    <div id="yt-featured" class="port-featured-video yt-facade" data-video-id="0u_Nprj1uaY" style="background-image:url('https://i.ytimg.com/vi/0u_Nprj1uaY/hqdefault.jpg');background-size:cover;background-position:center;cursor:pointer;position:relative;"><svg viewBox="0 0 68 48" width="68" height="48" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"><path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19C12.21,47.87,34,48,34,48s21.79-.13,27.1-1.55c2.93-.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00000" fill-opacity="0.85"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></div>
+    <div id="yt-featured" class="port-featured-video yt-facade" data-video-id="0u_Nprj1uaY" style="background-image:url('https://i.ytimg.com/vi/0u_Nprj1uaY/maxresdefault.jpg');background-size:cover;background-position:center;cursor:pointer;position:relative;"><svg viewBox="0 0 68 48" width="68" height="48" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"><path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19C12.21,47.87,34,48,34,48s21.79-.13,27.1-1.55c2.93-.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00000" fill-opacity="0.85"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></div>
     <button class="unmute-btn" type="button" aria-label="Toggle sound">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -274,7 +277,7 @@
 
   <div class="portfolio-grid">
     <div class="port-item port-video fade-up">
-      <div id="yt-grid-1" class="port-video-el yt-facade" data-video-id="8fE0WoRjuw8" style="background-image:url('https://i.ytimg.com/vi/8fE0WoRjuw8/hqdefault.jpg');background-size:cover;background-position:center;cursor:pointer;position:relative;"><svg viewBox="0 0 68 48" width="52" height="37" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"><path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19C12.21,47.87,34,48,34,48s21.79-.13,27.1-1.55c2.93-.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00000" fill-opacity="0.85"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></div>
+      <div id="yt-grid-1" class="port-video-el yt-facade" data-video-id="8fE0WoRjuw8" style="background-image:url('https://i.ytimg.com/vi/8fE0WoRjuw8/maxresdefault.jpg');background-size:cover;background-position:center;cursor:pointer;position:relative;"><svg viewBox="0 0 68 48" width="52" height="37" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"><path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19C12.21,47.87,34,48,34,48s21.79-.13,27.1-1.55c2.93-.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00000" fill-opacity="0.85"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></div>
       <button class="unmute-btn unmute-btn-small" type="button" aria-label="Toggle sound">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -287,7 +290,7 @@
       <div class="port-info"><h3>Short-Form Reel</h3><p>Cinematic · 0:16</p></div>
     </div>
     <div class="port-item port-video fade-up">
-      <div id="yt-grid-2" class="port-video-el yt-facade" data-video-id="FtyR7lYqUCY" style="background-image:url('https://i.ytimg.com/vi/FtyR7lYqUCY/hqdefault.jpg');background-size:cover;background-position:center;cursor:pointer;position:relative;"><svg viewBox="0 0 68 48" width="52" height="37" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"><path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19C12.21,47.87,34,48,34,48s21.79-.13,27.1-1.55c2.93-.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00000" fill-opacity="0.85"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></div>
+      <div id="yt-grid-2" class="port-video-el yt-facade" data-video-id="FtyR7lYqUCY" style="background-image:url('https://i.ytimg.com/vi/FtyR7lYqUCY/maxresdefault.jpg');background-size:cover;background-position:center;cursor:pointer;position:relative;"><svg viewBox="0 0 68 48" width="52" height="37" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"><path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19C12.21,47.87,34,48,34,48s21.79-.13,27.1-1.55c2.93-.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00000" fill-opacity="0.85"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></div>
       <button class="unmute-btn unmute-btn-small" type="button" aria-label="Toggle sound">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -731,19 +734,59 @@
   flatpickr("#project-deadline", { dateFormat: "Y-m-d" });
 </script>
 <script>
+function playFacade(el, opts){
+  opts = opts || {};
+  if(!el || !el.getAttribute || !el.isConnected) return;
+  var vid = el.getAttribute('data-video-id');
+  if(!vid) return;
+  var params = 'rel=0&modestbranding=1&playsinline=1&autoplay=1';
+  if(opts.muted) params += '&mute=1';
+  if(opts.loop) params += '&loop=1&playlist=' + vid;
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + vid + '?' + params;
+  f.id = el.id;
+  f.className = el.className.split('yt-facade').join('').trim();
+  f.setAttribute('frameborder','0');
+  f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+  f.setAttribute('allowfullscreen','');
+  f.style.cssText = 'border:0;';
+  var wrap = el.closest('.port-featured, .port-item');
+  el.replaceWith(f);
+  if(wrap) wrap.classList.add('yt-playing');
+}
+
 document.querySelectorAll('.yt-facade').forEach(function(el){
   el.addEventListener('click', function(){
-    var vid = el.getAttribute('data-video-id');
-    var f = document.createElement('iframe');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
-    f.id = el.id;
-    f.className = el.className.split('yt-facade').join('').trim();
-    f.setAttribute('frameborder','0');
-    f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-    f.setAttribute('allowfullscreen','');
-    f.style.cssText = 'border:0;';
-    el.replaceWith(f);
+    playFacade(el, { muted:false });
   });
+});
+
+if('IntersectionObserver' in window){
+  var autoplayObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        playFacade(entry.target, { muted:true, loop:true });
+        autoplayObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.yt-facade').forEach(function(el){
+    autoplayObserver.observe(el);
+  });
+}
+
+document.querySelectorAll('.yt-facade[data-video-id]').forEach(function(el){
+  var vid = el.getAttribute('data-video-id');
+  var img = new Image();
+  img.onload = function(){
+    if(img.naturalWidth <= 120){
+      el.style.backgroundImage = "url('https://i.ytimg.com/vi/" + vid + "/hqdefault.jpg')";
+    }
+  };
+  img.onerror = function(){
+    el.style.backgroundImage = "url('https://i.ytimg.com/vi/" + vid + "/hqdefault.jpg')";
+  };
+  img.src = 'https://i.ytimg.com/vi/' + vid + '/maxresdefault.jpg';
 });
 </script>
 </body>
