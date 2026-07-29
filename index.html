@@ -749,7 +749,7 @@ function playFacade(el, opts){
   f.setAttribute('frameborder','0');
   f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
   f.setAttribute('allowfullscreen','');
-  f.style.cssText = 'border:0;position:absolute;top:-9%;left:0;width:100%;height:118%;pointer-events:none;';
+  f.style.cssText = 'border:0;position:absolute;top:-60px;left:0;width:100%;height:calc(100% + 120px);pointer-events:none;';
   var wrap = el.closest('.port-featured, .port-item');if(wrap){wrap.style.aspectRatio='16/9';}
   el.replaceWith(f);
   if(wrap){wrap.classList.add('yt-playing');window.addMuteToggle(wrap,f,!!opts.muted);}
