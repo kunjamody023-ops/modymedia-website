@@ -639,10 +639,6 @@
       <label><input type="radio" name="captions" value="I don't know yet"> I don't know yet</label>
     </div>
 
-    <label>Budget Range *</label>
-
-    <input type="text" id="f_budget" placeholder="e.g. $200 – $300">
-
     <label>Anything else I need to know? (optional)</label>
     <textarea id="f_notes" placeholder="Any other details, questions, or context"></textarea>
 
@@ -686,11 +682,9 @@
         references: document.getElementById('f_references').value,
         assets: getRadio('assets'),
         captions: getRadio('captions'),
-        budget: document.getElementById('f_budget').value,
         notes: document.getElementById('f_notes').value
       };
 
-      try {
         const response = await fetch('https://hook.us2.make.com/mgcy6hou5rhudp5z2wrqwapih5hq953j', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
