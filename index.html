@@ -685,6 +685,7 @@
         notes: document.getElementById('f_notes').value
       };
 
+      try {
         const response = await fetch('https://hook.us2.make.com/mgcy6hou5rhudp5z2wrqwapih5hq953j', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
